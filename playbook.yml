@@ -1,0 +1,6 @@
+---
+- hosts: webservers
+  become: true
+  tasks:
+    - name: Run docker compose
+      shell: docker-compose up
