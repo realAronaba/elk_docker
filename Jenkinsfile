@@ -4,7 +4,11 @@ stage('Checkout') {
     }
 stage('RUN') {
 
- sh '/usr/local/bin/docker-compose up -d'
+  ansiblePlaybook(
+            playbook: 'playbook.yml',
+            inventory: 'inventory.ini',
+            credentialsId: 'ansible_jenkins')
+         }
 
 }
 stage('Finishing') {
