@@ -8,7 +8,7 @@ stage('RUN') {
             playbook: 'playbook.yml',
             inventory: 'inventory.ini',
             credentialsId: 'ansible_jenkins')
-         }
+         
 
 }
 stage('Finishing') {
