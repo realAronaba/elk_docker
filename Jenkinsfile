@@ -4,7 +4,7 @@ stage('Checkout') {
     }
 stage('RUN') {
 
- sh 'docker-compose up -d'
+ sh '/usr/local/bin/docker-compose up -d'
 
 }
 stage('Finishing') {
